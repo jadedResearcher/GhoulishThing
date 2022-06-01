@@ -1,0 +1,147 @@
+<html>
+
+<head>
+  <title>Ghoulish Thing</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="alt.ico" />
+  <script>
+
+    initBlorbos = (blorbos, monster) => {
+      const sources = {
+        solemn: 'http://farragofiction.com/TwoGayJokes/Stories/MurderGameIcons/thesolemn.png',
+        twin2: 'http://farragofiction.com/TwoGayJokes/Stories/MurderGameIcons/thetwins2.png',
+        _: 'http://farragofiction.com/TwoGayJokes/Stories/MurderGameIcons/_.png',
+        twin1: 'http://farragofiction.com/TwoGayJokes/Stories/MurderGameIcons/thetwins1.png',
+        reflection: 'http://farragofiction.com/TwoGayJokes/Stories/MurderGameIcons/thereflection.png',
+        match: 'http://farragofiction.com/TwoGayJokes/Stories/MurderGameIcons/thematch.png',
+        shot: 'http://farragofiction.com/TwoGayJokes/Stories/MurderGameIcons/theshot.png',
+        end: 'http://farragofiction.com/TwoGayJokes/Stories/MurderGameIcons/theend.png',
+        k: 'http://farragofiction.com/TwoGayJokes/Stories/MurderGameIcons/k.png', //doesn't deserve a title, bastard man
+      }
+
+      const monsters = {
+        solemn: 'http://farragofiction.com/TwoGayJokes/Stories/MonsterIcons/solemn.png',
+        twin2: 'http://farragofiction.com/TwoGayJokes/Stories/MonsterIcons/twins.png',
+        _: 'http://farragofiction.com/TwoGayJokes/Stories/MurderGameIcons/_.png',
+        twin1: 'http://farragofiction.com/TwoGayJokes/Stories/MonsterIcons/twins.png',
+        reflection: 'http://farragofiction.com/TwoGayJokes/Stories/MurderGameIcons/thereflection.png',
+        match: 'http://farragofiction.com/TwoGayJokes/Stories/MonsterIcons/match.png',
+        shot: 'http://farragofiction.com/TwoGayJokes/Stories/MonsterIcons/porter.png',
+        end: 'http://farragofiction.com/TwoGayJokes/Stories/MonsterIcons/end.png',
+        k: 'http://farragofiction.com/TwoGayJokes/Stories/MurderGameIcons/k.png', //doesn't deserve a title, bastard man
+      }
+      const ele = document.querySelector("#cast");
+      if (!ele) {
+        console.error("JR NOTE: cannot find cast section. Did you REALLY mean to call this?");
+        return;
+      }
+
+      for (let blorbo of blorbos) {
+        const img = document.createElement("img");
+        img.className = "blorbo";
+        img.src = sources[blorbo];
+        ele.append(img);
+        if (monster) {
+          console.log("JR NOTE: monster")
+          img.addEventListener("mouseover",() => {
+            console.log("JR NOTE: mouse enter")
+            img.src = monsters[blorbo];
+          });
+          img.onmouseout = () => {
+            img.src = sources[blorbo];
+          }
+        }
+      }
+      //stress test
+      /*
+      for(let source of Object.values(sources)){
+        const img = document.createElement("img");
+        img.className = "blorbo";
+        img.src = source;
+        ele.append(img);
+      }*/
+    }
+
+    window.onload = () => {
+      initBlorbos(["end", "match", "twin1", "twin2", "solemn"], true)
+    }
+
+    const start = ()=>{
+      document.querySelector("#story").style.display = "block";
+      document.querySelector("#euphoria").style.display = "none";
+      window.removeEventListener("click",start);
+      console.log("JR NOTE: start")
+    }
+
+    window.addEventListener("click",start); 
+
+
+  </script>
+</head>
+
+
+<body>
+  <img src="pexels-francesco-ungaro-97492.jpg" id="fake-background"></div>
+
+  <div id="container">
+    <button id="euphoria">Click To Experience Destruction</button>
+
+    <div id="story">
+      
+      <p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">The armor sticks to her like second skin.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">It has always been with her, in the vague presence her patron has ever offered, but now it truly is part of her. She feels the pauldrons as her shoulders, the gauntlets as her arms, the cuirass as her chest; for lack of better words, it feels correct.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="color: #ecf0f1;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">A part of her was lost when she accepted this armor. Now she knows what went missing: the fundamental truth that she has always been a monster, even before all this. That freakishly tall girl in school, who couldn&rsquo;t talk that well and had a bit too much weight to her punch. That creepy quiet woman at the corporation, who&rsquo;d take the night-end shifts and just stand there for the duration, saying nothing. That ghoulish </span><em><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">thing</span></em><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> now, so focused on hunting monsters that she never once looked for the one within. For so long she&rsquo;s unwittingly played the monster in someone else&rsquo;s story. Now she knows, and she simply is.</span></span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Yet there&rsquo;s a part of her that knows there is more after this. After whatever she plans to do, there will be more, there is always more, and while the bliss is short-lived, the consequences are permanent. They will all remember what happens here. If she lets herself die here, gives in to her fear, she can still get out of this. There is still a choice.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">But there is no point. She&rsquo;s already chosen.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="color: #ecf0f1;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Fear gushes out of her bleeding heart until it is nothing but an empty shell. What&rsquo;s left is the fury, the injustice, the overpowering </span><em><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">hatred</span></em><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> toward it all; years and decades and centuries of every gripe she&rsquo;s ever had laid to rest inside that coffin. Finally, they are all loose.</span></span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">All she has to do is begin the inevitable end of all things, and she knows exactly where to start.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><br /><br /><br /></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">They don&rsquo;t stand a chance.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">The sword drives itself with newfound hunger into the man&rsquo;s chest, each cut less precise and more vicious. His flesh is soft, rending itself at the lightest touch, parting with ease at the simplest gesture. Perhaps it wishes to be meat as much as any lesser creature.&nbsp;</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Her gaze trends downwards to the body beneath her. They were all so weak. The birds were bound to give her some trouble, but once the small one was dead, all the big one could do was track; it did not have the sheer strength to overpower her, or the necessary pack tactics to out-flank her. The one with the cross does not even deserve a mention. She supposes that even god in a man&rsquo;s body is still just a man.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">She&rsquo;s taken down three. Where&rsquo;s the fourth?</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">There she is-- on the floor, next to one of the bodies. The horror on her face is palpable, her coat and fingers soaked in blood from the pools spread so generously. She shakes and shakes, bloodied hand over her mouth, gripping as if it would stop her from ever making a sound.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">It&rsquo;s the convenient thing of living for an eternity. Perhaps you don&rsquo;t grow bored, but you grow accustomed to many patterns: the lives of people, the state of the weather, the trends that come and go. Anything can be tracked with meticulous precision, as long as you are paying attention.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">It is with that experience that she pinpoints the exact moment when her heart begins to break.&nbsp;</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">It starts as a giggle, nerve-wracked yet tepid. Then she chuckles. When no words come to her, when nothing but the sheer mania of it all settles in her mind, she laughs. She laughs and laughs as the flame within consumes her, soft meat replaced by inferno, her clothes serving as coals to further spread the itching fervor. The warrior&rsquo;s gaze is still as she finally collapses, and from her corpse rises a fire that will not go out.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">With her work here complete she sheathes her blade and turns back. She ought to think of where to strike next, but before that, she stands there. Perhaps if she stays still for long enough, the newborn flame will do something interesting; her blade is at the ready, waiting for when it inevitably chooses to cause her harm.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="color: #ecf0f1;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">What she does not expect is the fire to embrace her, flames licking at her feet with immeasurable restraint. Even without a voice, it speaks-- no, it </span><em><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">sings.</span></em><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> About how it&rsquo;s so glad she finally understands. How it knew she&rsquo;d get it. And about how much, oh, how much, it</span><em><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> loves</span></em><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;"> her.</span></span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">There is no hope for this world. Once, she thought this to be a delusion she had inflicted upon herself.&nbsp;</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">Now, it is real. It is the only thing that is.&nbsp;</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">This union is wrong, and it is ugly. No man was meant to spiral on its nature like this, letting itself be overtaken by the death yearned by all living beings.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">But for a strange, blissful moment, it doesn&rsquo;t matter. their dreams and aspirations simply peel off them, the void left replaced by each other&rsquo;s warmth. Only the two of them remain, haunted yet divine, charring heat against burning flesh, their armor white-hot. United as one.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="color: #ecf0f1;"><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">One fills the other&rsquo;s head with whispers, with adoration, with the shallow love of middle-schoolers. She dances and twirls and clings, humming in sing-song tones about the end of the world, cheering on her kindred flame. Just because it is fickle does not mean it is not genuine- she says it over and over again: </span><em><span style="font-size: 11pt; font-family: Arial; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">I love you, I love you, I love you.&nbsp;</span></em></span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">The other one can never respond, her throat pipe long-gone between fire and restraint. Perhaps some things are not meant to change. But in each swing of her blade lays devotion for her lover, every charred bone an offering, and for the first time in forever, there is no need for words.&nbsp;</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">There is no redemption in this hell they have made; here lays the judgment for their transgressions, their imperfections, their sins. One day there&rsquo;ll be no more to burn, and this wasteland they&rsquo;ve created shall be their grave.</span></p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;">&nbsp;</p>
+<p style="line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Arial; color: #ecf0f1; background-color: transparent; font-weight: 400; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap;">At least, when the time comes, they will go out together.</span></p>
+    </div>
+
+  </div>
+
+  <div id="cast"></div>
+</body>
+
+</html>

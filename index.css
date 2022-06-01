@@ -1,0 +1,73 @@
+body {
+  background-color: black;
+  pointer-events: none;
+
+}
+
+#fake-background{
+  width: 100%;
+  opacity: 0.5;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: -999;
+  pointer-events: none;
+
+}
+
+#container{
+  width: 1000px;
+  min-height: 1000px;
+  pointer-events: none;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0,0,0,0.3);
+  padding: 20px;
+  color: #f4f4f4;
+  font-weight: bolder;
+  border-radius: 8px;
+}
+
+#story{
+  padding: 50px;
+  display: none;
+  thetwins:are neville and devona;
+}
+
+.blorbo{
+  width: 150px;
+  display: block;
+  pointer-events: auto;
+}
+
+#cast {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+#cast::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+#cast{
+  width: 150px;
+  pointer-events: none;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+  z-index: -1;
+
+}
+
+button{
+  background: black;
+  color: white;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  display: block;
+  margin-top: 25%;
+}
